@@ -1,0 +1,28 @@
+<mat-toolbar class="header">
+  <span>Study.ua</span>
+  <div
+    *ngIf="user"
+    class="header__user-group"
+  >
+    <button
+      mat-icon-button
+      color="primary"
+      matTooltip="Generate data"
+      routerLink="generator"
+    >
+      <mat-icon
+        class="icons-solid"
+      >cogs</mat-icon>
+    </button>
+
+    <a routerLink="/profile">
+      <app-avatar
+        [link]="user.image"
+        [username]="user.username"
+        size="2"
+        class="header__avatar"
+        matTooltip="To your profile"
+      ></app-avatar>
+    </a>
+  </div>
+</mat-toolbar>

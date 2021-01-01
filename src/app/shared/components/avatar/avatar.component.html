@@ -1,0 +1,13 @@
+<img
+  *ngIf="hasImage"
+  class="avatar"
+  [ngStyle]="{'width': size+'rem', 'height': size+'rem'}"
+  [src]="link"
+/>
+<div
+  *ngIf="!hasImage"
+  class="avatar"
+  [ngStyle]="{'width': stringSize, 'height': stringSize, 'line-height': stringSize, 'font-size': size / 2 + 'rem'}"
+>
+  {{username[0] | uppercase}}
+</div>

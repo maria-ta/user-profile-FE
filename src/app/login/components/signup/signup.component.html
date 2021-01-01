@@ -1,0 +1,68 @@
+<mat-card class="modal-form">
+  <mat-card-title class="modal-form__title">Sign up</mat-card-title>
+
+  <form [formGroup]="formData" (submit)="onFormSubmit()">
+
+    <mat-form-field appearance="outline" class="modal-form__field">
+      <mat-label>Username</mat-label>
+      <input
+        formControlName="username"
+        matInput
+        required
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="modal-form__field">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" required>
+    </mat-form-field>
+
+    <!--    <app-password-field-->
+    <!--      class="modal-form__field"-->
+    <!--      formControlName="password"-->
+    <!--      required-->
+    <!--    ></app-password-field>-->
+
+    <!--    <app-password-field-->
+    <!--      class="modal-form__field"-->
+    <!--      formControlName="confirmPassword"-->
+    <!--      label="Confirm password"-->
+    <!--      required-->
+    <!--    ></app-password-field>-->
+    <div formGroupName="passwords">
+      <mat-form-field appearance="outline" class="modal-form__field">
+        <mat-label>Password</mat-label>
+        <input
+          formControlName="password"
+          type="password"
+          matInput
+          required
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="modal-form__field">
+        <mat-label>Confirm password</mat-label>
+        <input
+          formControlName="confirmPassword"
+          type="password"
+          matInput
+          required
+        >
+      </mat-form-field>
+    </div>
+    <app-icon-message
+      *ngIf="passwordChanged"
+      [type]="passwordMismatch ? 'error' : 'confirmation'"
+      [text]="passwordMismatch ? 'Passwords are not equal!' : 'Passwords are equal!'"
+    >
+    </app-icon-message>
+
+    <button mat-raised-button color="primary" class="modal-form__button">
+      Sign up
+    </button>
+  </form>
+
+  <mat-card-footer class="modal-form__footer">
+    <p>Already have an account? <a mat-button routerLink="/login">Sign in</a></p>
+  </mat-card-footer>
+</mat-card>

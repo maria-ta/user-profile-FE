@@ -1,0 +1,9 @@
+@import '../../../../styles/variables/colors';
+
+.avatar {
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+  background-color: $error;
+  color: $background;
+}

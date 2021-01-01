@@ -1,0 +1,54 @@
+<section class="profile-side-board">
+  <div class="profile-side-board__buttons">
+    <button
+      mat-icon-button
+      color="primary"
+      matTooltip="Go to profile settings"
+      routerLink="edit"
+    >
+      <mat-icon
+        class="icons-solid"
+      >pen</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      color="primary"
+      matTooltip="Sign out"
+      (click)="logout()"
+    >
+      <mat-icon
+        class="icons-solid"
+      >sign-out-alt</mat-icon>
+    </button>
+  </div>
+
+  <div class="profile-side-board__section">
+    <app-avatar
+      [link]="user.image"
+      [username]="user.username"
+      size="10"
+      class="profile-side-board__image"
+    ></app-avatar>
+
+    <h1 class="profile-side-board__title">Hello, {{user.username}}!</h1>
+  </div>
+
+  <div class="profile-side-board__data">
+    <div>First name: </div>
+    <div>{{user.firstname || '-'}}</div>
+
+    <div>Last name: </div>
+    <div>{{user.lastname || '-'}}</div>
+
+    <div>Email: </div>
+    <div>{{user.email}}</div>
+  </div>
+
+  <div class="profile-side-board__data">
+    <div>Preferred gender: </div>
+    <div>{{user.gender || '-'}}</div>
+
+    <div>Birthdate: </div>
+    <div>{{user.birthdate?.format('DD/MM/YYYY') || '-'}}</div>
+  </div>
+</section>

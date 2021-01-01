@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import "styles/fonts/font-awesome-icon-font";
+
+@import "styles/overrides/profile-side-board";
+
+@import "styles/states";
+
+@import "styles/modal-form";
+
+@import "styles/generator-table";
+
+* {
+  box-sizing: border-box;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

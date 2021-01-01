@@ -1,0 +1,22 @@
+@import "../../../../styles/variables/colors";
+
+.icon-message {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+
+  &.confirmation {
+    color: $confirmation;
+  }
+  &.error {
+    color: $error;
+  }
+}
+
+.icon-message__icon {
+  margin-right: 0.5rem;
+}
+
+p {
+  margin-bottom: 0;
+}

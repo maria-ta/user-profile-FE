@@ -1,0 +1,13 @@
+<ng-container *ngIf="user">
+  <app-profile-side-board
+    [user]="user"
+  ></app-profile-side-board>
+
+  <app-profile-main-part
+    [activitiesTiming]="activitiesTiming"
+    [averageRate]="averageRate"
+    [marksTiming]="marksTiming"
+    [favouriteTopics]="favoriteTopics"
+    [startedCourses]="startedCourses"
+  ></app-profile-main-part>
+</ng-container>

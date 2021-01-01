@@ -1,0 +1,30 @@
+@import "variables/screen-sizes";
+@import "variables/colors";
+
+.modal-form {
+  max-width: $min-screen-size;
+  margin: 0 auto;
+
+  .modal-form__footer {
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.modal-form__title {
+  margin-bottom: 1.125rem;
+  text-align: center;
+}
+
+.modal-form__field {
+  width: 100%;
+}
+
+.modal-form__button {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 16px;
+  line-height: 1.125em;
+}

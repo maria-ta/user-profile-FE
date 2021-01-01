@@ -1,0 +1,46 @@
+<mat-card class="modal-form">
+  <mat-card-title class="modal-form__title">Sign in</mat-card-title>
+
+  <form [formGroup]="formData" (submit)="onFormSubmit()">
+    <mat-form-field appearance="outline" class="modal-form__field">
+      <mat-label>Username</mat-label>
+      <input matInput id="username-input" formControlName="username" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="modal-form__field">
+      <mat-label>Password</mat-label>
+      <input matInput id="password-input" type="password" formControlName="password" required>
+    </mat-form-field>
+
+    <ng-container *ngIf="showErrorMessages">
+      <app-icon-message
+        *ngIf="isFormatError"
+        id="format-error-message"
+        [type]="messagesType"
+        text="Please enter username and password"
+      ></app-icon-message>
+
+      <app-icon-message
+        *ngIf="isWrongDataError"
+        id="data-error-message"
+        [type]="messagesType"
+        text="Username or password is wrong"
+      ></app-icon-message>
+
+      <app-icon-message
+        *ngIf="isUnknownError"
+        id="unknown-error-message"
+        [type]="messagesType"
+        text="Unknown error. Please, try again"
+      ></app-icon-message>
+    </ng-container>
+
+    <button id="submit-button" mat-raised-button color="primary" class="modal-form__button">
+      Sign in
+    </button>
+  </form>
+
+  <mat-card-footer class="modal-form__footer">
+    <p>Do not have an account? <a id="registration-link" mat-button routerLink="/login/registration">Sign up</a></p>
+  </mat-card-footer>
+</mat-card>

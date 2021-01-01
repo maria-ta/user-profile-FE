@@ -8,7 +8,7 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', async () => {
+  xit('should display welcome message', async () => {
     await page.navigateTo();
     expect(await page.getTitleText()).toEqual('user-profile app is running!');
   });

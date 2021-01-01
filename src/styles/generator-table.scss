@@ -1,0 +1,30 @@
+.generator-table-component {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.generator-table {
+  width: 100%;
+  margin-bottom: 16px;
+
+  .mat-cell, .mat-header-cell {
+    &:not(:first-child) {
+      padding-left: 8px;
+    }
+
+    &:not(:last-child) {
+      padding-right: 8px;
+    }
+  }
+
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+}
+
+.generate-button {
+  width: 200px;
+}

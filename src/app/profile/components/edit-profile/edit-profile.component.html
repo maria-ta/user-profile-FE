@@ -1,0 +1,73 @@
+<section *ngIf="formData" class="edit-profile">
+  <h1 class="edit-profile__title">Edit profile</h1>
+  <form [formGroup]="formData" (submit)="onFormSubmit()">
+
+    <mat-card class="edit-profile__card">
+      <h2 class="edit-profile__card-title">Account details</h2>
+      <div class="edit-profile__left-section">
+        <mat-form-field appearance="outline" class="modal-form__field">
+          <mat-label>Username</mat-label>
+          <input
+            formControlName="username"
+            matInput
+            required
+          >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="modal-form__field">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="modal-form__field">
+          <mat-label>Image (URL)</mat-label>
+          <input matInput formControlName="image">
+        </mat-form-field>
+      </div>
+      <div class="edit-profile__right-section">
+        <app-avatar
+          class="edit-profile__image"
+          [link]="formData.value.image"
+          [username]="user.username"
+          size="10"
+          matTooltip="Your photo will look like this"
+        ></app-avatar>
+      </div>
+    </mat-card>
+
+    <mat-card>
+      <h2>Personal details</h2>
+      <p>This information is not required, but helpful to us.</p>
+      <mat-form-field appearance="outline" class="modal-form__field">
+        <mat-label>First name</mat-label>
+        <input matInput formControlName="firstname">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="modal-form__field">
+        <mat-label>Last name</mat-label>
+        <input matInput formControlName="lastname">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Prefered gender</mat-label>
+        <mat-select formControlName="gender">
+          <mat-option *ngFor="let gender of genderOptions" [value]="gender.value">
+            {{gender.label}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="modal-form__field">
+        <mat-label>Birth date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="birthdate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </mat-card>
+
+    <div class="button-container">
+      <button mat-raised-button color="warning" routerLink="../delete">Delete</button>
+      <button mat-raised-button color="accent" (click)="onFormSubmit()">Save</button>
+    </div>
+  </form>
+</section>

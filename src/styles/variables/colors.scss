@@ -1,0 +1,8 @@
+// TODO: define color palette
+// TODO: define custom theme
+@import '../../../node_modules/@angular/material/theming';
+
+$primary: mat-color(mat-palette($mat-indigo));
+$confirmation: green;
+$error: mat-color(mat-palette($mat-red));
+$background: white;

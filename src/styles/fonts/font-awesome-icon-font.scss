@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'Font Awesome 5 Brands Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Font Awesome 5 Brands Regular'),
+  url('../../assets/fonts/FontAwesome5-Brands.otf');
+}
+
+.icons-brands-regular {
+  font-family: 'Font Awesome 5 Brands Regular', serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Font Awesome 5 Free Regular'),
+  url('../../assets/fonts/FontAwesome5-Regular.otf');
+}
+
+.icons-regular {
+  font-family: 'Font Awesome 5 Free Regular', serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free Solid';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Font Awesome 5 Free Solid'),
+  url('../../assets/fonts/FontAwesome5-Solid.otf');
+}
+
+.icons-solid {
+  font-family: 'Font Awesome 5 Free Solid', serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

@@ -1,0 +1,12 @@
+.delete-page {
+  text-align: center;
+
+  &__buttons {
+    button {
+      min-width: 120px;
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+}

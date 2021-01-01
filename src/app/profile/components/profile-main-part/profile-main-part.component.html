@@ -1,0 +1,90 @@
+<section
+  class="profile-main-part"
+>
+  <h2 class="profile-main-part__title">
+    <mat-icon
+      class="icons-solid profile-main-part__title-icon"
+    >chart-bar</mat-icon>
+    Statistics
+  </h2>
+
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Your marks
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <section class="section">
+        <!--    <h3 class="section__title">Your marks</h3>-->
+        <div class="section-bigger marks-timing" id="marksTimingGraphSection">
+          <ngx-charts-line-chart
+            [view]="[sizes.marksTimingGraphSection.width, sizes.marksTimingGraphSection.height]"
+            [results]="marksTiming"
+            scheme="picnic"
+            [yAxis]="true"
+            [xAxis]="true"
+            [autoScale]="true"
+            [maxXAxisTickLength]="6"
+          ></ngx-charts-line-chart>
+        </div>
+        <div class="section-smaller marks-average" [ngClass]="colorClass">
+          <p>Your average rate is</p>
+          <p class="average-rate-section__mark">
+            {{averageRate}}
+          </p>
+          <p>{{message}}</p>
+        </div>
+      </section>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Your activity
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <section class="section activity-section">
+        <!--    <h3 class="section__title">Your activity</h3>-->
+        <div class="section-full-width" id="activityTimingGraphSection">
+          <ngx-charts-bar-vertical
+            [view]="[sizes.activityTimingGraphSection.width, sizes.activityTimingGraphSection.height]"
+            [results]="activitiesTiming"
+            [scheme]="colors.singleColor"
+            [yAxis]="true"
+            [barPadding]="2"
+          ></ngx-charts-bar-vertical>
+        </div>
+      </section>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Your topics and courses
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <section class="section">
+        <div class="smaller-section" id="favoriteTopicsGraphSection">
+          <ngx-charts-pie-chart
+            [view]="[sizes.favoriteTopicsGraphSection.width, sizes.favoriteTopicsGraphSection.height]"
+            [results]="favouriteTopics"
+            [labels]="true"
+            scheme="picnic"
+          ></ngx-charts-pie-chart>
+        </div>
+        <div class="bigger-section" id="startedCoursesGraphSection">
+          <ngx-charts-bar-horizontal
+            [view]="[sizes.startedCoursesGraphSection.width, sizes.startedCoursesGraphSection.height]"
+            [results]="startedCourses"
+            [yAxis]="true"
+            [xAxis]="true"
+            [showGridLines]="true"
+            scheme="picnic"
+          ></ngx-charts-bar-horizontal>
+        </div>
+      </section>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>
+

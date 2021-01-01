@@ -1,0 +1,97 @@
+$header-height: 64px;
+
+:host {
+  flex-grow: 1;
+  max-width: calc(100% - 360px);
+  overflow: hidden;
+}
+
+.profile-main-part {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-left: 15px;
+
+  &__title {
+    &-icon {
+      margin-right: 8px;
+      width: 16px;
+      height: 16px;
+      font-size: 16px;
+    }
+  }
+
+  .section {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: calc((100vh - 94px) / 3);
+
+    &__title {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &.activity-section {
+      flex-grow: 0;
+      flex-shrink: 1;
+    }
+
+    &-bigger, &-smaller {
+      width: 50px;
+      flex-shrink: 1;
+
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+
+    &-bigger {
+      flex-grow: 6;
+    }
+
+    &-smaller {
+      flex-grow: 4;
+    }
+
+    &-full-width {
+      flex-shrink: 1;
+      width: 100%;
+    }
+  }
+}
+
+.marks-average {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  line-height: 2.5;
+  font-size: 20px;
+
+  &.excellent {
+    color: #32BD50;
+  }
+  &.great {
+    color: #8BCC31;
+  }
+  &.good {
+    color: #F1D302;
+  }
+  &.ok {
+    color: #E67E15;
+  }
+  &.not-ok {
+    color: #DA2828;
+  }
+
+  &__mark {
+    font-size: 52px;
+    line-height: 1.5;
+    font-weight: bolder;
+  }
+}

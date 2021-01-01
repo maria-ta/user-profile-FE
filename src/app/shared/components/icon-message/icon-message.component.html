@@ -1,0 +1,4 @@
+<div [ngClass]="'icon-message '+ type" [ngStyle]="isCustom? {'color': color} : {}">
+  <mat-icon class="material-icons-regular icon-message__icon">{{getIcon()}}</mat-icon>
+  <p>{{text}}</p>
+</div>

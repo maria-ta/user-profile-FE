@@ -1,0 +1,30 @@
+@import "./src/styles/variables/colors";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  color: $primary;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  &__user-group {
+    display: flex;
+  }
+}
+
+.header__avatar {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.header__spacer {
+  flex-grow: 1;
+}
